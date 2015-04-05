@@ -39,6 +39,13 @@ let center = VectorKit.turnCenter(r, heading, left, initial)
 let circleBounds = CGRect(x: 0, y: 0, width: r * 2, height: r * 2)
 let path = UIBezierPath(roundedRect: circleBounds, cornerRadius: circleBounds.size.height / 2.0)
 let circle = CAShapeLayer()
+circle.bounds = circleBounds
+circle.position = CGPoint(x: center.x, y: center.y)
+circle.strokeColor = UIColor.redColor().CGColor
+circle.fillColor = nil
+circle.lineWidth = 0.5
+circle.path = path.CGPath
+view.layer.addSublayer(circle)
 
 
 
