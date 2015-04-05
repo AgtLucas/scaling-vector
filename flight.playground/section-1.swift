@@ -32,3 +32,6 @@ view.layer.addSublayer(plane)
 let vectorLayer = dot()
 vectorLayer.position = CGPoint(x: vector.x, y: vector.y)
 view.layer.addSublayer(vectorLayer)
+
+let r = VectorKit.turnRadius(velocity, bank)
+let center = VectorKit.turnCenter(r, heading, left, initial)
