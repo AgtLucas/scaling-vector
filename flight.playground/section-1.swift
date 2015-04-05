@@ -35,3 +35,17 @@ view.layer.addSublayer(vectorLayer)
 
 let r = VectorKit.turnRadius(velocity, bank)
 let center = VectorKit.turnCenter(r, heading, left, initial)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
