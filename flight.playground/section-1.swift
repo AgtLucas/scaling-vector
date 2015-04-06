@@ -47,6 +47,14 @@ circle.lineWidth = 0.5
 circle.path = path.CGPath
 view.layer.addSublayer(circle)
 
+let tangent = VectorKit.tangentHeading(r, left, center, vector)
+
+let line = CALayer()
+line.backgroundColor = UIColor.yellowColor().CGColor
+line.bounds = CGRect(x: 0, y: 0, width: 800, height: 0.5)
+line.position = vectorLayer.position
+line.transform = CATransform3DMakeRotation(CGFloat(tangent), 0, 0, 1.0)
+view.layer.addSublayer(line)
 
 
 
